@@ -136,22 +136,18 @@ const Router = ({ children }: RouterProps) => {
 
 <br /><br />
 
-## 새롭게 알게된 점
+## 새롭게 배운 점
 
 ### `history.popState`와 `history.pushState`
 
 `history.pushState`와 `history.popState`는 웹 브라우저의 `history API`를 조작하는 데 사용되는 메서드이며 SPA에서 주로 사용됩니다.
 
-<br />
-
 - **history.pushState**
 
   `history.pushState` 메서드는 브라우저의 세션 기록 스택에 새로운 상태를 추가합니다. 이 메서드는 세 가지 인자(state object, title, URL)를 받습니다. 이 메서드를 사용하면 현재 페이지의 URL을 새로운 URL로 변경할 수 있지만 페이지의 새로고침 없이 실제 페이지 로드는 일어나지 않습니다.
-
-<br />
 
 - **history.popState**
 
   `history.popState`는 사실 메서드가 아니라 이벤트입니다. `popstate` 이벤트는 사용자가 브라우저의 '뒤로' 또는 '앞으로' 버튼을 클릭하여 히스토리 엔트리를 이동할 때마다 발생합니다. `history.pushState`나 `history.replaceState`로 변경된 history 엔트리에 대해서도 이 이벤트가 발생합니다.
 
-요약하면 `history.pushState`는 브라우저 히스토리 스택에 상태를 추가하며 URL을 변경하지만 페이지를 로드하지 않습니다. 반면 `popstate` 이벤트는 사용자가 브라우저의 '뒤로' 또는 '앞으로' 버튼을 클릭할 때 발생하며, 이 이벤트에 반응하여 웹 애플리케이션의 상태를 변경하거나 업데이트 할 수 있습니다.
+요약하면 `history.pushState`는 브라우저 히스토리 스택에 상태를 추가하며 URL을 변경하지만 페이지를 로드하지 않습니다. 반면 `popstate` 이벤트는 사용자가 브라우저의 '뒤로' 또는 '앞으로' 버튼을 클릭할 때 발생하며, 이벤트를 통해 웹 애플리케이션의 상태를 변경하거나 업데이트 할 수 있습니다.
